@@ -20,7 +20,7 @@ class CreateTeams < ActiveRecord::Migration
     	t.integer		:turnovers
     	t.integer		:personal_fouls
 
-      t.timestamps
+        t.timestamps
     end
   end
 end

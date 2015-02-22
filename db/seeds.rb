@@ -7,6 +7,8 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 require 'open-uri'
 Team.destroy_all
+Player.destroy_all
+
 
 teams = Nokogiri::HTML(
     open(
@@ -36,4 +38,8 @@ teams.each do |team|
         turnovers: 								team.css('td')[22].text,
        	personal_fouls: 					team.css('td')[23].text
 	})
+end
+
+Team.all do |team|
+    
 end
