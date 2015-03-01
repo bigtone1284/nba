@@ -2,6 +2,7 @@ class CreatePlayers < ActiveRecord::Migration
   def change
     create_table :players do |t|
     	t.string 			:name
+        t.integer           :age
     	t.integer			:games
     	t.integer			:games_started
     	t.integer			:minutes
@@ -18,7 +19,7 @@ class CreatePlayers < ActiveRecord::Migration
     	t.integer			:blocks
     	t.integer			:turnovers
     	t.integer			:personal_fouls
-    	t.references	:team
+    	t.references	    :team
 
     	t.timestamps
     end

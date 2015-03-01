@@ -11,12 +11,42 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150222161027) do
+ActiveRecord::Schema.define(version: 20150227041310) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "players", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "age"
+    t.integer  "games"
+    t.integer  "games_started"
+    t.integer  "minutes"
+    t.integer  "three_pointers"
+    t.integer  "three_pointers_attempted"
+    t.integer  "two_pointers"
+    t.integer  "two_pointers_attempted"
+    t.integer  "free_throws"
+    t.integer  "free_throws_attempted"
+    t.integer  "offensive_rebounds"
+    t.integer  "defensive_rebounds"
+    t.integer  "assists"
+    t.integer  "steals"
+    t.integer  "blocks"
+    t.integer  "turnovers"
+    t.integer  "personal_fouls"
+    t.integer  "team_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "field_goals"
+    t.integer  "field_goals_attempted"
+    t.decimal  "field_goal_percentage"
+    t.decimal  "three_point_percentage"
+    t.decimal  "two_point_percentage"
+    t.decimal  "free_throw_percentage"
+    t.decimal  "effective_fg_percentage"
+    t.integer  "points"
+    t.integer  "rebounds"
   end
 
   create_table "teams", force: :cascade do |t|
@@ -40,6 +70,7 @@ ActiveRecord::Schema.define(version: 20150222161027) do
     t.integer  "personal_fouls"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "team_abbrev"
   end
 
 end
